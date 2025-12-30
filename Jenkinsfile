@@ -25,8 +25,8 @@ pipeline{
         }
         stage("docker-run"){
             steps{
-                sh 'docker kill frontend'
-                sh 'docker rm frontend'
+               // sh 'docker kill frontend'
+                // sh 'docker rm frontend'
                sh 'docker run -it -d --name frontend -p 5001:80 ${IMAGE_NAME}'
             }
         }
