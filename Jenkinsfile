@@ -1,6 +1,11 @@
 pipeline{
     agent any
 
+    tools{
+        jdk 'java-17'
+        maven 'maven'
+    }
+
     environment{
         IMAGE_NAME = "arjunckm/backendapp:${BUILD_NUMBER}"
     }
