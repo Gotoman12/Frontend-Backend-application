@@ -42,7 +42,9 @@ pipeline{
         }
         stage("docker-run"){
             steps{
-               sh 'docker run --it -d --name c1 -p 5000:8086 ${IMAGE_NAME}'
+               // sh 'docker kill c1'
+               // sh 'docker rm c1'
+               sh 'docker run -it -d --name c1 -p 5000:8086 ${IMAGE_NAME}'
             }
         }
         stage("docker-push"){
