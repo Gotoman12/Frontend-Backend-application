@@ -6,7 +6,7 @@ pipeline{
     }
 
     stages{
-        stage{
+        stage("GIT"){
             steps{
                 git url:"https://github.com/Gotoman12/Frontend-Backend-application.git",branch: "main"
             }
