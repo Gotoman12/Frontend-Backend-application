@@ -25,9 +25,9 @@ pipeline{
         }
         stage("docker-run"){
             steps{
-               // sh 'docker kill c1'
-               // sh 'docker rm c1'
-               sh 'docker run -it -d --name c1 -p 5001:5173 ${IMAGE_NAME}'
+               // sh 'docker kill frontend'
+               // sh 'docker rm frontend'
+               sh 'docker run -it -d --name frontend -p 5001:5173 ${IMAGE_NAME}'
             }
         }
         stage("docker-push"){
